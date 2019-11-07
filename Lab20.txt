@@ -1,0 +1,18 @@
+1. select * from customers;
+2. select distinct country from customers;
+3. select * from customers where customerID like "BL%";
+4. select * from orders limit 100;
+5. select * from customers where PostalCode = 1010 or PostalCode = 3012 or PostalCode = 12209 or PostalCode = 05023
+6. select * from orders where shipRegion is not null;
+7. select * from customers order by country, city
+8. INSERT INTO `northwind`.`customers` (`CustomerID`, `CompanyName`, `ContactName`, `ContactTitle`, `Address`, `City`, `Region`, `PostalCode`, `Country`, `Phone`, `Image`, `ImageThumbnail`) VALUES ('STEAK', 'Great Steak', 'Steak Steakerson', 'Matt Lynn', '1234 Beefington', 'Rare', 'Medium', '91103', 'USA', '(123)456 -7890', ?, ?);
+9. update orders set ShipRegion = 'EuroZone' where ShipCountry = "France"
+10. delete from `order details` where quantity = 1;
+11. select min(quantity), max(quantity), avg(quantity) from `order details`
+12. select min(quantity), max(quantity), avg(quantity) from `order details` GROUP BY orderID;
+13. select CustomerID from orders where OrderID = "10290";
+14. 	Inner Join: select * from customers inner join orders on Customers.CustomerID = orders.CustomerID;
+	Left Join: SELECT * FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+	Right Join: SELECT * FROM Customers RIGHT JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+15. select employees.FirstName from employees where ReportsTo is NULL;
+16. select employees.FirstName from employees where ReportsTo = 2;	
